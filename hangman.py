@@ -9,6 +9,7 @@ def hangman():
     validLetters = "abcdefghijklmnopqrstuvwxyz"
     attempts = 10
     guessmade = ''
+    
     while len(word)> 0:
         main = ""
         missed = 0
@@ -22,7 +23,8 @@ def hangman():
                 print("You win")
                 break
 
-
+            print("Guess the word: ", main)
+            guess = input()
 
         if guess in validLetters:
             guessmade = guessmade + guess
