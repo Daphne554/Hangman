@@ -1,15 +1,18 @@
 import random
-DictFile = open("Dictionary.txt")
-dictionary = []
-for line in DictFile:
-    dictionary.append(line.strip("\n"))
+
 def hangman():
 
-    word = (dictionary[random.randint(0, len(dictionary) - 1)]).lower()
+    word = ( "Nigeria","Ethiopia","Democratic Republic of the Congo","Egypt","South Africa","Tanzania","Kenya",\
+             "Uganda","Algeria","Sudan","Morocco","Angola","Ghana","Cameron","Madagascar","Mozambique","IvoryCoast",\
+             "Niger","Mali","BurkinaFaso","Malawi","Chad","Somalia","Zimbabwe","Zambia","Senegal","South Sudan",\
+             "Rwanda","Guinea","Benin","Tunisia","Burundi","SierraLeone","Togo","Libya","Congo""Liberia",\
+             "CentralAfricanRepublic","Mauritania","Eritrea","Namibia","Gambia","Botswana","Gabon","Lesotho",\
+             "Guinea-Bissau","EquatorialGuinea","Mauritius","Eswatini","Djibouti","Comoros","CapeVerde","WesternSahara"\
+                 ,"Mayotte","Seychelles")
     validLetters = "abcdefghijklmnopqrstuvwxyz"
     attempts = 10
     guessmade = ''
-    
+
     while len(word)> 0:
         main = ""
         missed = 0
@@ -40,6 +43,5 @@ def hangman():
 name = input("Enter your name: ")
 print(f"Welcome {name}! ")
 print("You have 10 attempts to guess a word.")
-
-print()
 hangman()
+print()
